@@ -1,0 +1,113 @@
+{
+  "commercialVPNs": [
+    {
+      "name": "NordVPN",
+      "keywords": ["nordvpn", "nord vpn", "nordlynx"],
+      "asns": [196696, 204196, 212238]
+    },
+    {
+      "name": "ExpressVPN",
+      "keywords": ["expressvpn", "express vpn"],
+      "asns": [55352, 55536]
+    },
+    {
+      "name": "CyberGhost",
+      "keywords": ["cyberghost", "cyber ghost"],
+      "asns": [60117, 204630]
+    },
+    {
+      "name": "Surfshark",
+      "keywords": ["surfshark"],
+      "asns": [213316]
+    },
+    {
+      "name": "Private Internet Access",
+      "keywords": ["private internet access", "pia vpn", "privateinternetaccess"],
+      "asns": [53667]
+    },
+    {
+      "name": "ProtonVPN",
+      "keywords": ["protonvpn", "proton vpn", "proton technologies"],
+      "asns": [209103]
+    },
+    {
+      "name": "IPVanish",
+      "keywords": ["ipvanish"],
+      "asns": [18779]
+    },
+    {
+      "name": "TunnelBear",
+      "keywords": ["tunnelbear", "tunnel bear"],
+      "asns": [32613]
+    },
+    {
+      "name": "Windscribe",
+      "keywords": ["windscribe"],
+      "asns": [55081]
+    },
+    {
+      "name": "HideMyAss",
+      "keywords": ["hidemyass", "hide my ass", "hma vpn"],
+      "asns": [44050]
+    }
+  ],
+  "datacenters": [
+    {
+      "name": "DigitalOcean",
+      "keywords": ["digitalocean", "digital ocean"],
+      "asns": [14061]
+    },
+    {
+      "name": "Amazon AWS",
+      "keywords": ["amazon", "aws", "ec2", "amazon.com"],
+      "asns": [16509]
+    },
+    {
+      "name": "Google Cloud",
+      "keywords": ["google cloud", "google llc"],
+      "asns": [15169]
+    },
+    {
+      "name": "Microsoft Azure",
+      "keywords": ["microsoft", "azure"],
+      "asns": [8075]
+    },
+    {
+      "name": "Linode",
+      "keywords": ["linode", "akamai"],
+      "asns": [63949]
+    },
+    {
+      "name": "Vultr",
+      "keywords": ["vultr", "choopa"],
+      "asns": [20473]
+    },
+    {
+      "name": "OVH",
+      "keywords": ["ovh", "ovhcloud"],
+      "asns": [16276]
+    },
+    {
+      "name": "Hetzner",
+      "keywords": ["hetzner"],
+      "asns": [24940]
+    }
+  ],
+  "residentialProxies": [
+    {
+      "name": "Luminati/Bright Data",
+      "keywords": ["luminati", "bright data"],
+      "asns": []
+    },
+    {
+      "name": "Oxylabs",
+      "keywords": ["oxylabs"],
+      "asns": []
+    },
+    {
+      "name": "Smartproxy",
+      "keywords": ["smartproxy"],
+      "asns": []
+    }
+  ]
+}

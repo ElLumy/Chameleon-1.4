@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "Chameleon - Advanced Anti-Fingerprinting",
+  "version": "1.0.0",
+  "description": "Genera perfiles de navegador dinámicos y plausibles para mitigar el fingerprinting avanzado.",
+  "minimum_chrome_version": "102",
+  "permissions": [
+    "scripting",
+    "storage",
+    "tabs",
+    "cookies",
+    "browsingData",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content/injector.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "ISOLATED"
+    }
+  ],
+  "action": {
+    "default_popup": "ui/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/profiles.json",
+        "data/vpn-ranges.json",
+        "lib/seedrandom.min.js",
+        "content/chameleon-main.js",
+        "content/modules/utils/jitter.js",
+        "content/modules/interceptors/meta-proxy.js",
+        "content/modules/interceptors/navigator.js",
+        "content/modules/interceptors/screen.js",
+        "content/modules/interceptors/canvas.js",
+        "content/modules/interceptors/webgl.js",
+        "content/modules/interceptors/audio.js",
+        "content/modules/interceptors/timezone.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

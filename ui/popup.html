@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chameleon Control Panel</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../icons/icon48.png" alt="Chameleon" class="logo">
+            <h1>Chameleon</h1>
+            <span class="version">v1.0.0</span>
+        </header>
+        
+        <main>
+            <!-- Status Section -->
+            <section class="status-section">
+                <h2>Protection Status</h2>
+                <div class="status-indicator" id="statusIndicator">
+                    <span class="status-light"></span>
+                    <span class="status-text">Active</span>
+                </div>
+            </section>
+            
+            <!-- Current Profile Section -->
+            <section class="profile-section">
+                <h2>Current Identity</h2>
+                <div class="profile-info">
+                    <div class="info-row">
+                        <span class="label">Profile:</span>
+                        <span class="value" id="profileName">Loading...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Location:</span>
+                        <span class="value" id="profileLocation">Loading...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Device:</span>
+                        <span class="value" id="profileDevice">Loading...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Session ID:</span>
+                        <span class="value seed" id="sessionSeed">Loading...</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Coherence Check Section -->
+            <section class="coherence-section">
+                <h2>Coherence Check</h2>
+                <div class="coherence-status" id="coherenceStatus">
+                    <div class="check-item" id="timezoneCheck">
+                        <span class="check-icon">⏳</span>
+                        <span class="check-label">Timezone Match</span>
+                        <span class="check-status">Checking...</span>
+                    </div>
+                    <div class="check-item" id="languageCheck">
+                        <span class="check-icon">⏳</span>
+                        <span class="check-label">Language Match</span>
+                        <span class="check-status">Checking...</span>
+                    </div>
+                    <div class="check-item" id="webglCheck">
+                        <span class="check-icon">⏳</span>
+                        <span class="check-label">WebGL Consistency</span>
+                        <span class="check-status">Checking...</span>
+                    </div>
+                    <div class="check-item" id="vpnCheck">
+                        <span class="check-icon">⏳</span>
+                        <span class="check-label">VPN Detection</span>
+                        <span class="check-status">Checking...</span>
+                    </div>
+                </div>
+                
+                <div class="score-container">
+                    <div class="score-label">Camouflage Score</div>
+                    <div class="score-bar">
+                        <div class="score-fill" id="scoreFill"></div>
+                    </div>
+                    <div class="score-value" id="scoreValue">0%</div>
+                </div>
+            </section>
+            
+            <!-- Platform Detection Section -->
+            <section class="platform-section" id="platformSection">
+                <h2>Detected Platform</h2>
+                <div class="platform-info">
+                    <span class="platform-icon" id="platformIcon">🌐</span>
+                    <span class="platform-name" id="platformName">None</span>
+                </div>
+                <div class="platform-warning" id="platformWarning"></div>
+            </section>
+            
+            <!-- Actions Section -->
+            <section class="actions-section">
+                <button class="btn btn-primary" id="regenerateBtn">
+                    <span class="btn-icon">🔄</span>
+                    Regenerate Identity
+                </button>
+                
+                <button class="btn btn-secondary" id="clearDataBtn">
+                    <span class="btn-icon">🗑️</span>
+                    Clear Site Data
+                </button>
+                
+                <button class="btn btn-secondary" id="testFingerprintBtn">
+                    <span class="btn-icon">🔍</span>
+                    Test Fingerprint
+                </button>
+            </section>
+            
+            <!-- Advanced Info (Collapsible) -->
+            <details class="advanced-section">
+                <summary>Advanced Information</summary>
+                <div class="advanced-content">
+                    <pre id="advancedInfo"></pre>
+                </div>
+            </details>
+        </main>
+        
+        <footer>
+            <p>Protected against: Twitch, YouTube, Meta, TikTok</p>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
